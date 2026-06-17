@@ -301,8 +301,8 @@ img { max-width: 100%; display: block; }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 64px;
+  grid-template-columns: 380px 1fr;
+  gap: 48px;
   align-items: start;
 }
 
@@ -315,6 +315,17 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: auto;
   display: block;
+}
+
+.promo-poster {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+.promo-poster:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-hover);
 }
 
 .about-text h3 {
@@ -786,6 +797,27 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
 }
 
+.contact-qr {
+  margin-top: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.qr-code {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.qr-hint {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
 /* Form */
 .contact-form {
   background: var(--bg-card);
@@ -888,6 +920,7 @@ img { max-width: 100%; display: block; }
   .courses-grid { grid-template-columns: repeat(2, 1fr); }
   .tools-grid { max-width: 100%; }
   .about-grid { grid-template-columns: 1fr; justify-items: center; }
+  .about-avatar { max-width: 500px; width: 100%; }
   .about-text { text-align: center; }
   .about-info { grid-template-columns: 1fr 1fr; }
 }
